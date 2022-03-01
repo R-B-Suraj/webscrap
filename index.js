@@ -5,6 +5,8 @@ const app = express();
 
 app.use(express.json());
 
+app.get('/',(req,res)=>res.send('send post request to "https://rbsurajwebscrap.herokuapp.com/scrap" having body "url":"url to be scrapped"'));
+
 app.post('/scrap', (req, res) => {
 
     urlMetadata(req.body.url).then(
